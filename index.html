@@ -70,6 +70,35 @@
         .announce-bar a { color: #93c5fd; }
 
         /* ── HEADER ── */
+        .logo-banner {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .logo-banner img {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 16px rgba(0,75,135,0.15);
+        }
+        .logo-banner-text h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--blue);
+            line-height: 1.1;
+        }
+        .logo-banner-text h1 span { color: var(--slate); font-weight: 600; }
+        .logo-banner-text p {
+            font-size: 0.95rem;
+            color: var(--gray);
+            margin-top: 4px;
+        }
         header {
             position: sticky;
             top: 0;
@@ -437,12 +466,18 @@
     </div>
 
     <!-- HEADER -->
+    <!-- LOGO BANNER -->
+    <div class="logo-banner">
+        <img src="titan_logo.jpg" alt="Titan Renovations NYC Logo">
+        <div class="logo-banner-text">
+            <h1>Titan<span>Renovations</span>NYC</h1>
+            <p>NYC's Drywall Specialists — Brooklyn &amp; All 5 Boroughs</p>
+        </div>
+    </div>
+
     <header>
         <div class="header-inner">
-            <a href="#" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-                <img src="titan_logo.jpg" alt="Titan Renovations NYC" style="height:160px;width:160px;border-radius:50%;object-fit:cover;">
-                <span style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.4rem;color:#004B87;">Titan<span style="color:#708090;font-weight:600;">Renovations</span>NYC</span>
-            </a>
+            <a href="#" class="logo">Titan<span>Renovations</span>NYC</a>
             <nav>
                 <a href="#services">Services</a>
                 <a href="#portfolio">Portfolio</a>
@@ -847,8 +882,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="logo" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
-                        <img src="titan_logo.jpg" alt="Titan Renovations NYC" style="height:120px;width:120px;border-radius:50%;object-fit:cover;">
+                    <a href="#" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+                        <img src="titan_logo.jpg" alt="Titan Renovations NYC" style="height:64px;width:64px;border-radius:50%;object-fit:cover;">
                         <span style="color:#fff;font-weight:800;">TitanRenovationsNYC</span>
                     </a>
                     <p>Expert drywall installation, taping, finishing, and full interior renovations across New York City. Licensed, insured, and built on reputation.</p>
