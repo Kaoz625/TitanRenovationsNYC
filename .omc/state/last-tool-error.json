@@ -1,0 +1,7 @@
+{
+  "tool_name": "Grep",
+  "tool_input_preview": "{\"pattern\":\"nav-logo|footer-logo|href=\\\\\\\"#\\\\\\\".*Instagram|href=\\\\\\\"#\\\\\\\".*Facebook\",\"path\":\"/Users/markususche/Titan Renovations NYC/website/design1-blueprint.html\",\"output_mode\":\"content\",\"-n\":true}",
+  "error": "ENOENT: no such file or directory, posix_spawn 'rg'",
+  "timestamp": "2026-04-10T13:37:05.127Z",
+  "retry_count": 1
+}
