@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Titan Renovations &amp; Services LLC</title>
+  <meta name="description" content="Terms of Service for Titan Renovations & Services LLC. Read the terms and conditions governing the use of our website and services." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpolygon points='32,4 58,18 58,46 32,60 6,46 6,18' fill='%231a2e5c'/%3E%3Cpolygon points='32,10 52,22 52,42 32,54 12,42 12,22' fill='%234a9eff'/%3E%3Ctext x='32' y='40' font-family='Arial Black' font-size='24' font-weight='900' fill='white' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy-dark:    #0a1628;
+      --navy:         #1a2e5c;
+      --navy-mid:     #162449;
+      --gray-mid:     #6b7c8f;
+      --gray-light:   #b0b8c4;
+      --blue-accent:  #4a9eff;
+      --blue-dim:     rgba(74,158,255,0.15);
+      --blue-glow:    rgba(74,158,255,0.35);
+      --white:        #ffffff;
+      --off-white:    #e8edf5;
+      --text-muted:   #8a9ab0;
+      --grid-line:    rgba(74,158,255,0.05);
+      --card-bg:      rgba(26,46,92,0.45);
+      --card-border:  rgba(74,158,255,0.15);
+      --transition:   0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--navy-dark);
+      color: var(--off-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* =============================================
+       NAVIGATION
+    ============================================= */
+    #nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 18px 0;
+      background: rgba(10,22,40,0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(74,158,255,0.12);
+      transition: background 0.4s ease, padding 0.4s ease;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo .logo-svg {
+      width: 200px;
+      height: auto;
+      color: var(--white);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-light);
+      transition: color var(--transition);
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--blue-accent);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 3px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+    }
+    .btn-primary {
+      background: var(--blue-accent);
+      color: var(--navy-dark);
+    }
+    .btn-primary:hover {
+      background: #6ab3ff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(74,158,255,0.4);
+    }
+    .nav-cta { margin-left: 16px; }
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: var(--transition);
+    }
+
+    /* Mobile nav */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(10,22,40,0.98);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .mobile-close {
+      position: absolute;
+      top: 24px; right: 24px;
+      background: none; border: none;
+      color: var(--white);
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    /* =============================================
+       PAGE HEADER
+    ============================================= */
+    .page-header {
+      padding: 140px 0 60px;
+      border-bottom: 1px solid rgba(74,158,255,0.1);
+      background-image:
+        linear-gradient(rgba(74,158,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(74,158,255,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .page-header .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      margin-bottom: 16px;
+    }
+    .page-header .section-label::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--blue-accent);
+    }
+    .page-header h1 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .page-header p {
+      font-size: 1.05rem;
+      color: var(--gray-mid);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    /* =============================================
+       LEGAL CONTENT
+    ============================================= */
+    .legal-content {
+      padding: 64px 0 80px;
+    }
+    .legal-content .content-inner {
+      max-width: 800px;
+    }
+    .legal-content h2 {
+      font-size: 1.4rem;
+      color: var(--white);
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(74,158,255,0.12);
+    }
+    .legal-content h2:first-child {
+      margin-top: 0;
+    }
+    .legal-content h3 {
+      font-size: 1.1rem;
+      color: var(--blue-accent);
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+    .legal-content p {
+      color: var(--gray-light);
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+    .legal-content ul {
+      list-style: none;
+      margin-bottom: 16px;
+      padding-left: 0;
+    }
+    .legal-content ul li {
+      color: var(--gray-light);
+      padding: 6px 0 6px 24px;
+      position: relative;
+      line-height: 1.7;
+    }
+    .legal-content ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 8px;
+      height: 1px;
+      background: var(--blue-accent);
+    }
+    .legal-content a {
+      color: var(--blue-accent);
+      transition: color var(--transition);
+    }
+    .legal-content a:hover {
+      color: #6ab3ff;
+    }
+    .legal-content .effective-date {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 8px 16px;
+      margin-bottom: 32px;
+    }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    #footer {
+      background: #060f1e;
+      border-top: 1px solid rgba(74,158,255,0.1);
+      padding: 56px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 44px;
+    }
+    .footer-brand p {
+      font-size: 0.875rem;
+      color: var(--gray-mid);
+      line-height: 1.7;
+      margin-top: 16px;
+      max-width: 300px;
+    }
+    .footer-logo .logo-svg {
+      width: 180px;
+      height: auto;
+      color: var(--white);
+    }
+    .footer-col-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      margin-bottom: 16px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links a {
+      font-size: 0.875rem;
+      color: var(--gray-mid);
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom {
+      border-top: 1px solid rgba(74,158,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+    .footer-legal a {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      transition: color var(--transition);
+    }
+    .footer-legal a:hover { color: var(--gray-light); }
+    .footer-social {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .footer-social a {
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(74,158,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-mid);
+      transition: var(--transition);
+    }
+    .footer-social a:hover {
+      border-color: var(--blue-accent);
+      color: var(--blue-accent);
+    }
+
+    /* =============================================
+       RESPONSIVE
+    ============================================= */
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
+  <a href="design1-blueprint.html">Home</a>
+  <a href="design1-blueprint.html#services">Services</a>
+  <a href="design1-blueprint.html#gallery">Gallery</a>
+  <a href="design1-blueprint.html#contact">Contact</a>
+  <a href="design1-blueprint.html#contact" class="btn btn-primary" onclick="closeMobile()">Free Quote</a>
+</div>
+
+<!-- Navigation -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="design1-blueprint.html" class="nav-logo" aria-label="Titan Renovations Home">
+        <svg class="logo-svg" viewBox="0 0 220 70" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polygon points="30,4 54,17 54,44 30,57 6,44 6,17" fill="#6b7c8f"/>
+          <polygon points="30,9 49,20 49,41 30,52 11,41 11,20" fill="#3d4f66"/>
+          <polygon points="30,13 47,25 13,25" fill="#1a2e5c"/>
+          <rect x="14" y="25" width="32" height="22" fill="#1a2e5c"/>
+          <rect x="20" y="29" width="14" height="12" fill="white"/>
+          <rect x="21" y="30" width="5" height="4" fill="#1a2e5c"/>
+          <rect x="28" y="30" width="5" height="4" fill="#1a2e5c"/>
+          <rect x="21" y="36" width="5" height="4" fill="#1a2e5c"/>
+          <rect x="28" y="36" width="5" height="4" fill="#1a2e5c"/>
+          <rect x="26" y="29" width="2" height="12" fill="white"/>
+          <rect x="20" y="35" width="14" height="2" fill="white"/>
+          <text x="65" y="26" font-family="Arial Black, sans-serif" font-size="13" font-weight="900" fill="currentColor" letter-spacing="0.8">TITAN RENOVATIONS</text>
+          <text x="65" y="40" font-family="Arial, sans-serif" font-size="9" fill="#6b7c8f" letter-spacing="2">&#38; SERVICES LLC</text>
+          <text x="65" y="53" font-family="Arial, sans-serif" font-size="8" font-style="italic" fill="#6b7c8f">From concepts to completion</text>
+          <text x="65" y="63" font-family="Arial, sans-serif" font-size="7" font-style="italic" fill="#6b7c8f">Turning visions into reality</text>
+        </svg>
+      </a>
+      <ul class="nav-links">
+        <li><a href="design1-blueprint.html#about">About</a></li>
+        <li><a href="design1-blueprint.html#services">Services</a></li>
+        <li><a href="design1-blueprint.html#process">Process</a></li>
+        <li><a href="design1-blueprint.html#gallery">Gallery</a></li>
+        <li><a href="design1-blueprint.html#testimonials">Reviews</a></li>
+        <li><a href="design1-blueprint.html#contact">Contact</a></li>
+      </ul>
+      <a href="design1-blueprint.html#contact" class="btn btn-primary nav-cta">Free Quote</a>
+      <div class="nav-hamburger" id="hamburger" role="button" aria-label="Open menu" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<header class="page-header">
+  <div class="container">
+    <div class="section-label">Legal</div>
+    <h1>Terms of Service</h1>
+    <p>Terms and conditions governing your use of the Titan Renovations &amp; Services LLC website and services.</p>
+  </div>
+</header>
+
+<!-- Terms of Service Content -->
+<main class="legal-content">
+  <div class="container">
+    <div class="content-inner">
+      <div class="effective-date">Effective Date: April 7, 2026</div>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>By accessing and using the website operated by Titan Renovations &amp; Services LLC ("Company," "we," "us," or "our"), you ("User," "you," or "your") acknowledge that you have read, understood, and agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our website or services.</p>
+
+      <h2>2. Description of Services</h2>
+      <p>Titan Renovations &amp; Services LLC is a residential renovation company serving the New York City metropolitan area, including Long Island, Queens, Brooklyn, Manhattan, Bronx, and Staten Island. Our services include, but are not limited to:</p>
+      <ul>
+        <li>Demolition</li>
+        <li>Drywall installation and repair</li>
+        <li>Plaster repair</li>
+        <li>Interior painting</li>
+        <li>Flooring installation</li>
+        <li>Clean outs</li>
+        <li>Turnovers (apartment and property turnovers)</li>
+      </ul>
+      <p>The information provided on this website is for general informational purposes only. Specific services, pricing, timelines, and scope of work are determined on a per-project basis through individual consultations and written agreements.</p>
+
+      <h2>3. Free Quotes and Estimates</h2>
+      <p>Quotes and estimates provided through our website, phone, or in-person consultations are non-binding and for informational purposes only. A quote does not constitute a contract or guarantee of final pricing. Actual costs may vary based on:</p>
+      <ul>
+        <li>Scope of work discovered during the project</li>
+        <li>Unforeseen conditions (e.g., structural damage, mold, asbestos)</li>
+        <li>Changes requested by the client</li>
+        <li>Material cost fluctuations</li>
+        <li>Permit or inspection requirements</li>
+      </ul>
+      <p>All final project pricing, scope, and terms will be documented in a separate written agreement or contract between the Company and the client prior to the commencement of work.</p>
+
+      <h2>4. Service Agreements and Contracts</h2>
+      <p>All renovation work performed by Titan Renovations &amp; Services LLC is governed by a separate written service agreement or contract between the Company and the client. These Terms of Service govern your use of our website; they do not replace or supersede any project-specific contract.</p>
+
+      <h2>5. Payment Terms</h2>
+      <p>Payment terms for renovation services are outlined in individual project contracts. General payment policies include:</p>
+      <ul>
+        <li>A deposit may be required before work commences, as specified in the project contract</li>
+        <li>Progress payments may be required at agreed-upon milestones</li>
+        <li>Final payment is due upon project completion and client walkthrough</li>
+        <li>Accepted payment methods will be specified in the project contract</li>
+        <li>Late payments may be subject to interest or late fees as outlined in the project contract</li>
+      </ul>
+      <p>Specific payment schedules, amounts, and methods are agreed upon in writing before work begins.</p>
+
+      <h2>6. Cancellation and Rescheduling</h2>
+      <p>Cancellation and rescheduling policies for scheduled work are outlined in individual project contracts. If you need to cancel or reschedule a consultation or site visit, please contact us at least 24 hours in advance at <a href="tel:3472072330">(347) 207-2330</a> or <a href="mailto:titanrenovationsny@gmail.com">titanrenovationsny@gmail.com</a>.</p>
+
+      <h2>7. Warranties and Workmanship</h2>
+      <p>Titan Renovations &amp; Services LLC stands behind the quality of our work. Warranty terms for specific projects, including duration, coverage, and exclusions, are detailed in individual project contracts. General warranty conditions include:</p>
+      <ul>
+        <li>Warranties apply to labor and workmanship performed by our team</li>
+        <li>Manufacturer warranties on materials are separate and subject to the manufacturer's terms</li>
+        <li>Warranties do not cover damage resulting from misuse, neglect, or unauthorized modifications</li>
+        <li>Warranty claims must be reported promptly in writing</li>
+      </ul>
+
+      <h2>8. Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law:</p>
+      <ul>
+        <li>The Company shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from or related to the use of this website</li>
+        <li>The Company's total liability for any claim arising from use of this website shall not exceed the amount paid by you, if any, to access the website</li>
+        <li>The Company is not liable for delays or failures in performance resulting from causes beyond our reasonable control, including but not limited to natural disasters, weather, labor disputes, supply chain disruptions, or government actions</li>
+        <li>The website and its content are provided "as is" and "as available" without warranties of any kind, either express or implied</li>
+      </ul>
+      <p>Liability related to renovation services is governed by the terms of individual project contracts and applicable New York State law.</p>
+
+      <h2>9. Intellectual Property</h2>
+      <p>All content on this website, including text, graphics, logos, images, and the overall design and layout, is the property of Titan Renovations &amp; Services LLC or its licensors and is protected by applicable intellectual property laws. You may not reproduce, distribute, modify, or create derivative works of any content without our prior written consent.</p>
+
+      <h2>10. Website Use</h2>
+      <p>By using this website, you agree not to:</p>
+      <ul>
+        <li>Use the website for any unlawful purpose or in violation of any applicable laws</li>
+        <li>Submit false, misleading, or fraudulent information through the contact form</li>
+        <li>Attempt to interfere with the proper functioning of the website</li>
+        <li>Use automated systems (bots, scrapers, etc.) to access the website without our permission</li>
+        <li>Transmit viruses, malware, or other harmful code</li>
+      </ul>
+
+      <h2>11. Third-Party Links</h2>
+      <p>Our website may contain links to third-party websites or services (such as Yelp, social media platforms, or image hosting services). These links are provided for your convenience. We are not responsible for the content, privacy policies, or practices of third-party websites. Accessing third-party links is at your own risk.</p>
+
+      <h2>12. Indemnification</h2>
+      <p>You agree to indemnify, defend, and hold harmless Titan Renovations &amp; Services LLC, its owners, officers, employees, and agents from and against any claims, liabilities, damages, losses, or expenses (including reasonable attorneys' fees) arising out of or related to your use of the website, your violation of these Terms, or your violation of any rights of a third party.</p>
+
+      <h2>13. Dispute Resolution</h2>
+
+      <h3>13.1 Informal Resolution</h3>
+      <p>Before initiating any formal dispute resolution proceedings, you agree to first contact us at <a href="mailto:titanrenovationsny@gmail.com">titanrenovationsny@gmail.com</a> or <a href="tel:3472072330">(347) 207-2330</a> to attempt to resolve the dispute informally. We will make good-faith efforts to resolve any concerns within 30 business days.</p>
+
+      <h3>13.2 Mediation</h3>
+      <p>If informal resolution is unsuccessful, the parties agree to attempt mediation before a mutually agreed-upon mediator in New York City before pursuing litigation.</p>
+
+      <h3>13.3 Jurisdiction and Venue</h3>
+      <p>Any legal action or proceeding arising out of or relating to these Terms shall be brought exclusively in the state or federal courts located in the State of New York, County of Queens. You consent to the personal jurisdiction of such courts.</p>
+
+      <h2>14. Governing Law</h2>
+      <p>These Terms of Service shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of law provisions. All disputes arising under or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts of the State of New York.</p>
+
+      <h2>15. Severability</h2>
+      <p>If any provision of these Terms is found to be invalid, illegal, or unenforceable, the remaining provisions shall continue in full force and effect. The invalid or unenforceable provision shall be modified to the minimum extent necessary to make it valid, legal, and enforceable.</p>
+
+      <h2>16. Changes to These Terms</h2>
+      <p>We reserve the right to modify these Terms of Service at any time. Changes will be posted on this page with an updated effective date. Your continued use of the website after changes are posted constitutes your acceptance of the revised Terms. We encourage you to review these Terms periodically.</p>
+
+      <h2>17. Contact Us</h2>
+      <p>If you have questions about these Terms of Service, please contact us:</p>
+      <ul>
+        <li><strong>Titan Renovations &amp; Services LLC</strong></li>
+        <li>Phone: <a href="tel:3472072330">(347) 207-2330</a></li>
+        <li>Email: <a href="mailto:titanrenovationsny@gmail.com">titanrenovationsny@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="design1-blueprint.html" class="footer-logo" aria-label="Titan Renovations Home">
+          <svg class="logo-svg" viewBox="0 0 220 70" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polygon points="30,4 54,17 54,44 30,57 6,44 6,17" fill="#6b7c8f"/>
+            <polygon points="30,9 49,20 49,41 30,52 11,41 11,20" fill="#3d4f66"/>
+            <polygon points="30,13 47,25 13,25" fill="#1a2e5c"/>
+            <rect x="14" y="25" width="32" height="22" fill="#1a2e5c"/>
+            <rect x="20" y="29" width="14" height="12" fill="white"/>
+            <rect x="21" y="30" width="5" height="4" fill="#1a2e5c"/>
+            <rect x="28" y="30" width="5" height="4" fill="#1a2e5c"/>
+            <rect x="21" y="36" width="5" height="4" fill="#1a2e5c"/>
+            <rect x="28" y="36" width="5" height="4" fill="#1a2e5c"/>
+            <rect x="26" y="29" width="2" height="12" fill="white"/>
+            <rect x="20" y="35" width="14" height="2" fill="white"/>
+            <text x="65" y="26" font-family="Arial Black, sans-serif" font-size="13" font-weight="900" fill="currentColor" letter-spacing="0.8">TITAN RENOVATIONS</text>
+            <text x="65" y="40" font-family="Arial, sans-serif" font-size="9" fill="#6b7c8f" letter-spacing="2">&#38; SERVICES LLC</text>
+            <text x="65" y="53" font-family="Arial, sans-serif" font-size="8" font-style="italic" fill="#6b7c8f">From concepts to completion</text>
+            <text x="65" y="63" font-family="Arial, sans-serif" font-size="7" font-style="italic" fill="#6b7c8f">Turning visions into reality</text>
+          </svg>
+        </a>
+        <p>NYC's trusted residential renovation specialists. Demolition, drywall, plaster, painting, flooring, clean outs &amp; turnovers — delivered with precision across Queens, Brooklyn, Manhattan, Bronx, Staten Island &amp; Long Island.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.yelp.com/search?find_desc=titan+renovations&find_loc=new+york" aria-label="Yelp" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L9 9H2l5.5 4-2 7L12 16l6.5 4-2-7L22 9h-7z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="design1-blueprint.html#services">Demolition</a></li>
+          <li><a href="design1-blueprint.html#services">Drywall Installation</a></li>
+          <li><a href="design1-blueprint.html#services">Drywall Repair</a></li>
+          <li><a href="design1-blueprint.html#services">Plaster Repair</a></li>
+          <li><a href="design1-blueprint.html#services">Interior Painting</a></li>
+          <li><a href="design1-blueprint.html#services">Flooring</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:3472072330">(347) 207-2330</a></li>
+          <li><a href="mailto:titanrenovationsny@gmail.com">titanrenovationsny@gmail.com</a></li>
+          <li><a href="design1-blueprint.html#contact">Get a Free Quote</a></li>
+          <li><a href="design1-blueprint.html#about">About Us</a></li>
+          <li><a href="design1-blueprint.html#gallery">Our Work</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Titan Renovations &amp; Services LLC. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html" style="color:var(--blue-accent)">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  var mobileClose = document.getElementById('mobileClose');
+
+  function openMobile() { mobileMenu.classList.add('open'); }
+  function closeMobile() { mobileMenu.classList.remove('open'); }
+
+  hamburger.addEventListener('click', openMobile);
+  hamburger.addEventListener('keydown', function(e) { if (e.key === 'Enter') openMobile(); });
+  mobileClose.addEventListener('click', closeMobile);
+  mobileMenu.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeMobile); });
+</script>
+</body>
+</html>
