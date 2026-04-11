@@ -388,7 +388,7 @@
     .hero-title .accent { color: var(--blue-accent); }
     .hero-tagline {
       font-family: 'Inter', sans-serif;
-      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-size: clamp(1.4rem, 2.8vw, 2rem);
       color: var(--gray-light);
       font-style: italic;
       margin-top: 20px;
@@ -1332,9 +1332,9 @@
     <div class="nav-inner">
       <a href="#hero" class="nav-logo" aria-label="Titan Renovations Home" style="display:flex;align-items:center;gap:14px;">
         <img class="logo-svg" src="titan-logo-transparent.png" alt="Titan Renovations &amp; Services LLC" style="height:90px;width:auto;" />
-        <div style="display:flex;flex-direction:column;line-height:1.3;">
-          <span style="font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:500;color:var(--gray-light);letter-spacing:0.08em;text-transform:uppercase;">From concepts to completion</span>
-          <span style="font-family:'Inter',sans-serif;font-size:0.68rem;font-style:italic;color:var(--blue-accent);letter-spacing:0.02em;">Turning visions into reality</span>
+        <div style="display:flex;flex-direction:column;line-height:1.25;">
+          <span style="font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:700;color:#fff;letter-spacing:0.01em;">Titan Renovations</span>
+          <span style="font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:500;color:var(--blue-accent);letter-spacing:0.04em;">&amp; Services LLC</span>
         </div>
       </a>
       <ul class="nav-links">
@@ -1405,7 +1405,7 @@
         <div class="stat-label">Based &amp; Operated</div>
       </div>
       <div class="stat-item reveal" style="transition-delay:0.1s">
-        <div class="stat-value">6</div>
+        <div class="stat-value">8</div>
         <div class="stat-label">Core Services</div>
       </div>
       <div class="stat-item reveal" style="transition-delay:0.2s">
@@ -1591,6 +1591,46 @@
         </svg>
         <div class="service-name">Flooring</div>
         <p class="service-desc">Installation and refinishing of hardwood, engineered wood, tile, and LVP flooring. Precise measurements, expert subfloor prep, and lasting results.</p>
+        <a href="#" class="service-link" onclick="openServiceModal(this);return false;">
+          Learn More
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="service-card reveal" style="transition-delay:0.35s" data-service="Clean Outs" data-img="https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=800">
+        <div class="service-img">
+          <img src="https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Professional clean out service" loading="lazy" />
+        </div>
+        <span class="card-number">07</span>
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M12 40V20l4-4h16l4 4v20" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 40h32" stroke-linecap="round"/>
+          <path d="M20 40V28h8v12" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18 16V10M30 16V10" stroke-linecap="round"/>
+        </svg>
+        <div class="service-name">Clean Outs</div>
+        <p class="service-desc">Full property clean outs for estates, foreclosures, rentals, and commercial spaces. We remove debris, furniture, and unwanted items quickly and responsibly.</p>
+        <a href="#" class="service-link" onclick="openServiceModal(this);return false;">
+          Learn More
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="service-card reveal" style="transition-delay:0.4s" data-service="Turnovers" data-img="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800">
+        <div class="service-img">
+          <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Apartment turnover ready for new tenant" loading="lazy" />
+        </div>
+        <span class="card-number">08</span>
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M8 24H4l20-20 20 20h-4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 24v16h32V24" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18 40V30h12v10" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="36" cy="30" r="3" fill="currentColor" stroke="none"/>
+        </svg>
+        <div class="service-name">Turnovers</div>
+        <p class="service-desc">Rapid unit preparation between tenants — patching, painting, cleaning, and repairs to get your rental ready fast and up to code for the next occupant.</p>
         <a href="#" class="service-link" onclick="openServiceModal(this);return false;">
           Learn More
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1907,6 +1947,8 @@
           <li><a href="#services">Plaster Repair</a></li>
           <li><a href="#services">Interior Painting</a></li>
           <li><a href="#services">Flooring</a></li>
+          <li><a href="#services">Clean Outs</a></li>
+          <li><a href="#services">Turnovers</a></li>
         </ul>
       </div>
       <div class="footer-col">
