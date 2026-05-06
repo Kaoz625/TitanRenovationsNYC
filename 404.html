@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Titan Renovations NYC</title>
+  <script>
+    (function () {
+      var path = window.location.pathname;
+      if (path !== '/' && !path.match(/\.[a-z0-9]+$/i) && !path.endsWith('/')) {
+        window.location.replace(path + '.html' + window.location.search + window.location.hash);
+        return;
+      }
+      window.location.replace('/');
+    })();
+  </script>
+  <noscript><meta http-equiv="refresh" content="0; url=/"></noscript>
+</head>
+<body><p>Redirecting...</p></body>
+</html>
